@@ -29,4 +29,4 @@ RUN apk --update add \
 
 COPY config.json /etc/consul/config.json
 
-ENTRYPOINT ["consul -config-dir=/etc/consul"]
+ENTRYPOINT ["consul"]
