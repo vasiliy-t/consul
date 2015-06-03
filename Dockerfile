@@ -23,7 +23,10 @@ RUN apk --update add \
         bash \
         musl-dev \
         openssl-dev && \
+    mkdir -p /tmp/consul && \
     rm -rf /etc/ssl/certs/* && \
     rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["consul"]
+COPY config.json /etc/consul/config.json
+
+ENTRYPOINT ["consul -config-dir=/etc/consul"]
