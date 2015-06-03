@@ -29,4 +29,6 @@ RUN apk --update add \
 
 COPY config.json /etc/consul/config.json
 
+EXPOSE 8300-8302 8301-8302/udp 8400 8500 53 53/udp
+
 ENTRYPOINT ["consul"]
