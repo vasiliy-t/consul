@@ -2,7 +2,8 @@
     "data_dir": "/tmp/consul",
     "client_addr": "0.0.0.0",
     "ports": {
-        "dns": 53
+        "dns": -1
     },
-    "disable_update_check": true
+    "disable_update_check": true,
+    "disable_anonymous_signature": true
 }
